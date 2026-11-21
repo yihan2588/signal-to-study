@@ -6,7 +6,7 @@ Signal to Study helps editors see how the wording of a news alert shapes what re
 
 Google says its new chip cuts latency by up to half. The plain alert attributes the claim to Google. The revised alert adds two facts an editor might otherwise leave implicit: Google supplied the measurement, and nobody outside Google had verified it.
 
-In this hypothetical comparison, spelling out those facts changes which evidence answer is selected. The average ratings for trust and willingness to open the alert barely move.
+In this study, spelling out those facts changes which evidence answer is selected. The average ratings for trust and willingness to open the alert barely move.
 
 | Across the Google and ElevenLabs stories | Plain alert | Source labeled |
 | --- | ---: | ---: |

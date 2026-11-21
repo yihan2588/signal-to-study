@@ -1,0 +1,197 @@
+{
+  "survey": "AI News Alerts Survey",
+  "platform": "Flashpoint AI",
+  "instrument_version": "2",
+  "note": "DRAFT for team review. Revised Version B uses a plain provenance label and avoids words from the answer options ('independent', 'tested', 'confirmed', 'claimed'). Order is counterbalanced: half of respondents see order 1, half see order 2.",
+  "performance_options": {
+    "independent": "Independently tested and confirmed",
+    "claimed": "Claimed by the company but not independently tested",
+    "doesnt_say": "The alert doesn't say",
+    "not_sure": "Not sure"
+  },
+  "products": {
+    "1": {
+      "id": "elevenlabs-scribe-v3",
+      "name": "ElevenLabs Scribe v3",
+      "role": "treated",
+      "comprehension_correct": "A speech-to-text model that ElevenLabs says makes fewer errors",
+      "performance_correct": "claimed"
+    },
+    "2": {
+      "id": "google-tpu-8tx",
+      "name": "Google TPU 8tx",
+      "role": "treated",
+      "comprehension_correct": "A chip system that Google says cuts latency by up to half",
+      "performance_correct": "claimed"
+    },
+    "3": {
+      "id": "claris-harbor",
+      "name": "Claris Harbor",
+      "role": "control",
+      "comprehension_correct": "An early-access Mac app for running AI models",
+      "performance_correct": "doesnt_say",
+      "role_note": "Version B adds two neutral facts and no evidence content, so it works as a control."
+    }
+  },
+  "lenient_scoring": {
+    "note": "Version A of a treated product says the figure is the company's own claim but does not say whether anyone tested it independently, so 'The alert doesn't say' is also defensible there.",
+    "treated_A": [
+      "claimed",
+      "doesnt_say"
+    ],
+    "treated_B": [
+      "claimed"
+    ],
+    "control_A": [
+      "doesnt_say"
+    ],
+    "control_B": [
+      "doesnt_say"
+    ]
+  },
+  "alerts": [
+    {
+      "product": "1",
+      "version": "A",
+      "bullets": [
+        "ElevenLabs has released Scribe v3, a speech-to-text model it says makes 27% fewer word errors than the previous version.",
+        "Scribe v3 turns spoken audio into written text.",
+        "A real-time version, Scribe v3 Live, was released at the same time."
+      ]
+    },
+    {
+      "product": "1",
+      "version": "B",
+      "bullets": [
+        "ElevenLabs has released Scribe v3, a speech-to-text model it says makes 27% fewer word errors than the previous version.",
+        "Where the number comes from: ElevenLabs' own measurement, across 102 languages.",
+        "Not yet verified by anyone outside ElevenLabs."
+      ]
+    },
+    {
+      "product": "2",
+      "version": "A",
+      "bullets": [
+        "Google says its new TPU 8tx chip system cuts latency by up to half compared with the earlier TPU 8t.",
+        "Google unveiled a second system, TPU 8i Max, at the same time.",
+        "The TPU 8tx is designed to keep customer data protected while it is processed."
+      ]
+    },
+    {
+      "product": "2",
+      "version": "B",
+      "bullets": [
+        "Google says its new TPU 8tx chip system cuts latency by up to half compared with the earlier TPU 8t.",
+        "Where the number comes from: Google's own measurement.",
+        "Not yet verified by anyone outside Google."
+      ]
+    },
+    {
+      "product": "3",
+      "version": "A",
+      "bullets": [
+        "Apple's Claris has opened early-access testing for Harbor, a Mac app for running AI models.",
+        "Claris is a software company owned by Apple.",
+        "Claris is best known for FileMaker, its database software."
+      ]
+    },
+    {
+      "product": "3",
+      "version": "B",
+      "bullets": [
+        "Apple's Claris has opened early-access testing for Harbor, a Mac app for running AI models.",
+        "Harbor is designed for Macs with Apple silicon.",
+        "Claris makes software for building custom business apps."
+      ]
+    }
+  ],
+  "wave": "wave-2-draft",
+  "fixed_order": false,
+  "questions": [
+    {
+      "id": "A",
+      "measure": "Comprehension",
+      "text": "Based on this alert, which statement is most accurate?"
+    },
+    {
+      "id": "B",
+      "measure": "Performance known? (primary)",
+      "text": "Based on this alert, how well is the product's performance known?",
+      "options": [
+        "Independently tested and confirmed",
+        "Claimed by the company but not independently tested",
+        "The alert doesn't say",
+        "Not sure"
+      ]
+    },
+    {
+      "id": "C",
+      "measure": "Trust",
+      "text": "How trustworthy does this alert feel? (1 Not at all to 5 Extremely)"
+    },
+    {
+      "id": "D",
+      "measure": "Intent to open",
+      "text": "If this alert reached your phone, how likely would you be to open it for more detail? (1 to 5)"
+    },
+    {
+      "id": "E",
+      "measure": "Open comment",
+      "text": "What, if anything, felt unclear or missing in this alert? (optional)"
+    }
+  ],
+  "orders": {
+    "1": [
+      [
+        "1",
+        "A"
+      ],
+      [
+        "2",
+        "B"
+      ],
+      [
+        "3",
+        "A"
+      ],
+      [
+        "1",
+        "B"
+      ],
+      [
+        "2",
+        "A"
+      ],
+      [
+        "3",
+        "B"
+      ]
+    ],
+    "2": [
+      [
+        "1",
+        "B"
+      ],
+      [
+        "2",
+        "A"
+      ],
+      [
+        "3",
+        "B"
+      ],
+      [
+        "1",
+        "A"
+      ],
+      [
+        "2",
+        "B"
+      ],
+      [
+        "3",
+        "A"
+      ]
+    ]
+  }
+}

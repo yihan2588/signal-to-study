@@ -1,0 +1,93 @@
+{
+  "unit": "One pair compares the two answers for the same story within one record.",
+  "scenarios": {
+    "whatif": {
+      "records": 100,
+      "eligible": 73,
+      "versions": {
+        "A": {
+          "answers": 146,
+          "company_attributions": 69,
+          "trust_points": 418,
+          "open_intent_points": 413
+        },
+        "B": {
+          "answers": 146,
+          "company_attributions": 101,
+          "trust_points": 435,
+          "open_intent_points": 417
+        }
+      },
+      "answer_pairs": {
+        "independent": {
+          "independent": 1,
+          "claimed": 8,
+          "doesnt_say": 2,
+          "not_sure": 4
+        },
+        "claimed": {
+          "independent": 6,
+          "claimed": 47,
+          "doesnt_say": 11,
+          "not_sure": 5
+        },
+        "doesnt_say": {
+          "independent": 2,
+          "claimed": 36,
+          "doesnt_say": 8,
+          "not_sure": 3
+        },
+        "not_sure": {
+          "independent": 0,
+          "claimed": 10,
+          "doesnt_say": 2,
+          "not_sure": 1
+        }
+      }
+    },
+    "null": {
+      "records": 100,
+      "eligible": 73,
+      "versions": {
+        "A": {
+          "answers": 146,
+          "company_attributions": 69,
+          "trust_points": 418,
+          "open_intent_points": 413
+        },
+        "B": {
+          "answers": 146,
+          "company_attributions": 86,
+          "trust_points": 436,
+          "open_intent_points": 417
+        }
+      },
+      "answer_pairs": {
+        "independent": {
+          "independent": 1,
+          "claimed": 7,
+          "doesnt_say": 3,
+          "not_sure": 4
+        },
+        "claimed": {
+          "independent": 7,
+          "claimed": 38,
+          "doesnt_say": 18,
+          "not_sure": 6
+        },
+        "doesnt_say": {
+          "independent": 3,
+          "claimed": 33,
+          "doesnt_say": 8,
+          "not_sure": 5
+        },
+        "not_sure": {
+          "independent": 0,
+          "claimed": 8,
+          "doesnt_say": 4,
+          "not_sure": 1
+        }
+      }
+    }
+  }
+}

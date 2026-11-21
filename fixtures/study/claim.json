@@ -1,0 +1,19 @@
+{
+  "id": "northline-comprehension",
+  "statement": "Does adding a source and uncertainty box help readers understand what Northline announced?",
+  "story_id": "northline",
+  "control": "plain",
+  "treatment": "boxed",
+  "treatment_addition": "Source: Northline Compute's pilot announcement. The announcement provides no independent benchmarks. Performance outside the pilot remains uncertain.",
+  "question": {
+    "id": "comprehension",
+    "text": "What did Northline Compute announce?",
+    "options": {
+      "limited-pilot": "A limited pilot",
+      "general-release": "A general release",
+      "benchmarks": "Independent performance benchmarks",
+      "unsure": "Not sure"
+    },
+    "correct": "limited-pilot"
+  }
+}

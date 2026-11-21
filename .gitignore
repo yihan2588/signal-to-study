@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+.env.*
+.vercel/
+build/
+flashpoint-exports/
+private-data/
+*.csv
+*.key
+*.pem

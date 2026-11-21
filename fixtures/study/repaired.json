@@ -1,0 +1,46 @@
+{
+  "study_id": "alert-format-demo",
+  "revision": "draft-2",
+  "source": {
+    "kind": "fixture",
+    "reference": "Fictional same-story survey and handcrafted outcome rows for the verifier demo"
+  },
+  "assignment": {
+    "method": "randomized",
+    "unit": "respondent",
+    "exposures_per_unit": 1,
+    "weights": {"plain": 1, "boxed": 1}
+  },
+  "arms": {
+    "plain": {
+      "story_id": "northline",
+      "content": "Northline opens its Ardent inference chip pilot. Northline Compute opened a limited pilot for its Ardent inference accelerator. The date for general availability remains unknown.",
+      "addition": null,
+      "question": {
+        "id": "comprehension",
+        "text": "What did Northline Compute announce?",
+        "options": {
+          "limited-pilot": "A limited pilot",
+          "general-release": "A general release",
+          "benchmarks": "Independent performance benchmarks",
+          "unsure": "Not sure"
+        }
+      }
+    },
+    "boxed": {
+      "story_id": "northline",
+      "content": "Northline opens its Ardent inference chip pilot. Northline Compute opened a limited pilot for its Ardent inference accelerator. The date for general availability remains unknown.",
+      "addition": "Source: Northline Compute's pilot announcement. The announcement provides no independent benchmarks. Performance outside the pilot remains uncertain.",
+      "question": {
+        "id": "comprehension",
+        "text": "What did Northline Compute announce?",
+        "options": {
+          "limited-pilot": "A limited pilot",
+          "general-release": "A general release",
+          "benchmarks": "Independent performance benchmarks",
+          "unsure": "Not sure"
+        }
+      }
+    }
+  }
+}

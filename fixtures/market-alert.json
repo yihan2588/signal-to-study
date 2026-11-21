@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "id": "pilot-announcement",
+      "kind": "source",
+      "title": "Northline Compute pilot announcement",
+      "publisher": "Northline Compute (fictional)",
+      "published_at": "2026-11-14T16:00:00Z",
+      "retrieved_at": "2026-11-15T14:00:00Z",
+      "url": null,
+      "excerpt": "The Ardent program started as an internal accelerator project. Northline Compute opened a limited pilot of its Ardent inference accelerator. The company has yet to announce a general availability date. The announcement contains no independent performance benchmarks."
+    },
+    {
+      "id": "pilot-claim",
+      "kind": "claim",
+      "title": "Pilot opened with general availability still unknown",
+      "quote": "Northline Compute opened a limited pilot of its Ardent inference accelerator. The company has yet to announce a general availability date."
+    },
+    {
+      "id": "evidence-panel",
+      "kind": "hypothesis",
+      "title": "An evidence panel may improve comprehension and trust",
+      "question": "Should market alerts show their sources and uncertainty?"
+    },
+    {
+      "id": "alert-comparison",
+      "kind": "study",
+      "title": "Compare two versions of the same alert",
+      "status": "proposed",
+      "version": "fixture-v1",
+      "method": "The draft compares two versions of one alert with readers of AI market news. Confirm the intended audience, recruitment, and randomization in Flashpoint before fielding.",
+      "alert": {
+        "headline": "Northline opens its Ardent inference chip pilot",
+        "summary": "Northline Compute opened a limited pilot for its Ardent inference accelerator. The date for general availability remains unknown.",
+        "time": "9:00 a.m. ET"
+      },
+      "variants": [
+        { "id": "A", "label": "Summary" },
+        {
+          "id": "B",
+          "label": "Summary and evidence",
+          "source_id": "pilot-announcement",
+          "uncertainty": "The announcement provides no independent benchmarks. Performance outside the pilot remains uncertain."
+        }
+      ],
+      "questions": [
+        {
+          "id": "comprehension",
+          "measure": "Comprehension",
+          "text": "What did Northline Compute announce?",
+          "counted_answer": "A limited pilot"
+        },
+        {
+          "id": "trust",
+          "measure": "Perceived trust",
+          "text": "How trustworthy does this alert feel?",
+          "counted_answer": "Very or extremely trustworthy"
+        },
+        {
+          "id": "opening",
+          "measure": "Stated intent to open",
+          "text": "How likely would you be to open this alert for more detail?",
+          "counted_answer": "Very or extremely likely"
+        }
+      ]
+    },
+    {
+      "id": "example-counts",
+      "kind": "result",
+      "title": "Illustrative response counts",
+      "status": "fixture",
+      "sample": "Handwritten example counts. Real respondents recruited for this study: 0.",
+      "counts": {
+        "A": { "responses": 8, "comprehension": 5, "trust": 4, "opening": 3 },
+        "B": { "responses": 8, "comprehension": 6, "trust": 5, "opening": 4 }
+      }
+    },
+    {
+      "id": "prototype-decision",
+      "kind": "decision",
+      "title": "Keep both variants for the pilot",
+      "status": "pending",
+      "rationale": "The source motivates the comparison. Choose a variant after reviewing real survey responses, the agreed decision rule, and the sample limitations.",
+      "source_ids": ["pilot-announcement"],
+      "observation_ids": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "pilot-announcement",
+      "relation": "supports",
+      "target": "pilot-claim",
+      "status": "fixture"
+    },
+    {
+      "source": "pilot-claim",
+      "relation": "motivates",
+      "target": "evidence-panel",
+      "status": "proposed"
+    },
+    {
+      "source": "evidence-panel",
+      "relation": "tested by",
+      "target": "alert-comparison",
+      "status": "proposed"
+    },
+    {
+      "source": "alert-comparison",
+      "relation": "has fixture result",
+      "target": "example-counts",
+      "status": "fixture"
+    },
+    {
+      "source": "alert-comparison",
+      "relation": "will inform",
+      "target": "prototype-decision",
+      "status": "proposed"
+    }
+  ]
+}
